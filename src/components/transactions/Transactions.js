@@ -1,4 +1,6 @@
 import './Transactions.css'
+import PropTypes from 'prop-types'
+
 const TransactionHistory = ({ items }) => {
     return (
         <table className="transaction-history">
@@ -25,3 +27,6 @@ const TransactionHistory = ({ items }) => {
     )
 }
 export default TransactionHistory
+TransactionHistory.propTypes = {
+    items: PropTypes.array.isRequired,
+}
