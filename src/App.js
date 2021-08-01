@@ -24,7 +24,6 @@ function App() {
         stats={user.stats} />
       
       <Statistics
-        title="upload stats"
         stats={statisticalData} />
       
       <FriendList friends={friends} />

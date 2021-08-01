@@ -1,5 +1,6 @@
 import './friend-list.css'
 import PropTypes from 'prop-types'
+import FriendListItem from '../friendListItem/friendListItem'
 
 
 
@@ -9,11 +10,7 @@ const FriendList = ({ friends }) => {
  
         <ul className="friend-list">
             {friends.map((friend) => {
-                return <li key={friend.id} className="item">
-                    <span className={friend.isOnline ? 'is-active status' : 'is-inactive status'}></span>
-                    <img className="avatar" src={friend.avatar} alt={friend.name} width="48" />
-                    <p className="name">{friend.name}</p> 
-                </li>;
+                return <FriendListItem avatar={friend.avatar} name={friend.name} isOnline={friend.isOnline} id={friend.id}/>
             })
             }
         </ul>
