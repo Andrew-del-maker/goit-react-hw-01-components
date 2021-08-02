@@ -5,7 +5,7 @@ const Statistics = ({stats, title} ) => {
     
     return (
         <div className="social">
-        <h1>{title}</h1>
+            {title&&<h1>{title}</h1>}         
         <ul className="stat-list">
             {stats.map((stat) => {
                 return <li key={stat.id} className="item">
