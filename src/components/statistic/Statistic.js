@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
 import './Statistic.css'
     
-const Statistics = ({stats} ) => {
+const Statistics = ({stats, title} ) => {
     
     return (
-    <div className="social">
+        <div className="social">
+        <h1>{title}</h1>
         <ul className="stat-list">
             {stats.map((stat) => {
                 return <li key={stat.id} className="item">
